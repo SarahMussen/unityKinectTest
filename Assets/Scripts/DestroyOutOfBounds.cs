@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyOutOfBounds : MonoBehaviour
 {
 
-    private float bound = -3.0f;
+    private float bound = -4.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,9 @@ public class DestroyOutOfBounds : MonoBehaviour
         //if the poop is behind the farmer, destroy the poop
         if (transform.position.z <= bound)
         {
-            Destroy(gameObject);
+            GameManager.Instance.addMissedPoop();
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

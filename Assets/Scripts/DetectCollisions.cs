@@ -24,7 +24,8 @@ public class DetectCollisions : MonoBehaviour
     {
         Debug.Log("colission detected");
         GameManager.Instance.addCathedPoop();
-        Destroy(other.gameObject);
+        //Destroy(other.gameObject);
+        gameObject.SetActive(false);
     }
 
 }

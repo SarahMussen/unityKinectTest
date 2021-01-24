@@ -9,9 +9,12 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     private int catchedPoop = 0;
+    private int missedPoop = 0;
 
     [SerializeField]
     private TextMeshProUGUI catchedPoopText;
+    [SerializeField]
+    private TextMeshProUGUI missedPoopText;
 
     void Awake()
     {
@@ -28,10 +31,17 @@ public class GameManager : MonoBehaviour
         updateGUI();
     }
 
+    public void addMissedPoop()
+    {
+        missedPoop++;
+        updateGUI();
+    }
+
     //updates the GUI
     private void updateGUI()
     {
         catchedPoopText.text = "Score: " + catchedPoop;
+        missedPoopText.text = "Missed: " +missedPoop;
     }
 
 

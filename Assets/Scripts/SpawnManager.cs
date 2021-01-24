@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject poopPrefab;
-    /*    private float spawnPosX = 0.16f;
-        private float spawnPosY = 0.84f;
-        private float spawnPosZ = 12.1f;*/
+    //public GameObject poopPrefab;
+    public ObjectPool poopPool;
 
     private float spawnPosX;
     private float spawnPosY;
@@ -20,7 +18,9 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //InvokeRepeating("SpawnPoop", startDelay, spawnInterval);
         InvokeRepeating("SpawnPoop", startDelay, spawnInterval);
+
     }
 
     // Update is called once per frame
@@ -36,6 +36,9 @@ public class SpawnManager : MonoBehaviour
         spawnPosZ = transform.position.z;
 
         Vector3 spawnPos = new Vector3(spawnPosX, spawnPosY, spawnPosZ);
-        Instantiate(poopPrefab, spawnPos, poopPrefab.transform.rotation);
+        //Instantiate(poopPrefab, spawnPos, poopPrefab.transform.rotation);
+
+        GameObject poop = poopPool.GetObject();
+        poop.transform.position = spawnPos;
     }
 }
