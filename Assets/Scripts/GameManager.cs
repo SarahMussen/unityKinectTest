@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI upgradeText;
     [SerializeField]
     private TextMeshProUGUI downgradeText;
+
+
     [SerializeField]
     private RawImage firstItemImg;
     [SerializeField]
@@ -42,6 +44,23 @@ public class GameManager : MonoBehaviour
     private RawImage fourthItemImg;
     [SerializeField]
     private Texture fourthItemTexture;
+
+    [SerializeField]
+    private RawImage firstEnvironmentImg;
+    [SerializeField]
+    private Texture firstEnvironmentTexture;
+    [SerializeField]
+    private RawImage secondEnvironmentImg;
+    [SerializeField]
+    private Texture secondEnvironmentTexture;
+    [SerializeField]
+    private RawImage thirdEnvironmentImg;
+    [SerializeField]
+    private Texture thirdEnvironmentTexture;
+    [SerializeField]
+    private RawImage fourthEnvironmentImg;
+    [SerializeField]
+    private Texture fourthEnvironmentTexture;
 
     void Awake()
     {
@@ -73,7 +92,8 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Updates the upgrade gui depending on how much catched poop; changes the slider and the corresponding image
+    /// Updates the upgrade gui depending on how much catched poop;
+    /// Changes the slider, the text and the image
     /// </summary>
     private void updateUpgradeGUI()
     {
@@ -105,7 +125,8 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Updates the downgrade gui depending on how much missed poop; changes the slider and the corresponding image
+    /// Updates the downgrade gui depending on how much missed poop;
+    /// Changes the slider, the text and the image
     /// </summary>
     private void updateDowngradeGUI()
     {
@@ -114,19 +135,22 @@ public class GameManager : MonoBehaviour
             case 5:
                 downgradeSlider.value = 75;
                 downgradeText.text = "75% omgeving";
+                firstEnvironmentImg.texture = firstEnvironmentTexture;
                 break;
             case 10:
                 downgradeSlider.value = 50;
                 downgradeText.text = "50% omgeving";
-
+                secondEnvironmentImg.texture = secondEnvironmentTexture;
                 break;
             case 15:
                 downgradeSlider.value = 25;
                 downgradeText.text = "25% omgeving";
+                thirdEnvironmentImg.texture = thirdEnvironmentTexture;
                 break;
             case 20:
                 downgradeSlider.value = 0;
                 downgradeText.text = "0% omgeving";
+                fourthEnvironmentImg.texture = fourthEnvironmentTexture;
                 break;
             default:
                 break;

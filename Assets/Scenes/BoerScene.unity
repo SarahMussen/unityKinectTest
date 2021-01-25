@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 139994388}
   - component: {fileID: 139994387}
   m_Layer: 5
-  m_Name: water
+  m_Name: environment1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,12 +182,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6792453, g: 0.6440014, b: 0.6440014, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 03754d8e851dfaf44bfb3c8e98499b7a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6792453, g: 0.6440014, b: 0.6440014, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1442,7 +1442,7 @@ GameObject:
   - component: {fileID: 1233875822}
   - component: {fileID: 1233875821}
   m_Layer: 5
-  m_Name: flowers
+  m_Name: environment2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1480,12 +1480,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6792453, g: 0.6440014, b: 0.6440014, a: 1}
+  m_Color: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 03754d8e851dfaf44bfb3c8e98499b7a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1550,7 +1550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6792453, g: 0.6440014, b: 0.6440014, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1842,7 +1842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6792453, g: 0.6440014, b: 0.6440014, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1874,7 +1874,7 @@ GameObject:
   - component: {fileID: 1418571789}
   - component: {fileID: 1418571788}
   m_Layer: 5
-  m_Name: question2
+  m_Name: environment4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1912,12 +1912,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6792453, g: 0.6440014, b: 0.6440014, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 03754d8e851dfaf44bfb3c8e98499b7a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2207,7 +2207,7 @@ GameObject:
   - component: {fileID: 1629129888}
   - component: {fileID: 1629129887}
   m_Layer: 5
-  m_Name: question1
+  m_Name: environment3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2245,12 +2245,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6792453, g: 0.6440014, b: 0.6440014, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 03754d8e851dfaf44bfb3c8e98499b7a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2470,7 +2470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6792453, g: 0.6440014, b: 0.6440014, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3100,6 +3100,18 @@ MonoBehaviour:
   thirdItemTexture: {fileID: 2800000, guid: 557a5fc2e6054a2479e4c54ebe856b69, type: 3}
   fourthItemImg: {fileID: 1417384942}
   fourthItemTexture: {fileID: 2800000, guid: 557a5fc2e6054a2479e4c54ebe856b69, type: 3}
+  firstEnvironmentImg: {fileID: 139994387}
+  firstEnvironmentTexture: {fileID: 2800000, guid: 1b551392b71a21f488cc250fecf0f4c9,
+    type: 3}
+  secondEnvironmentImg: {fileID: 1233875821}
+  secondEnvironmentTexture: {fileID: 2800000, guid: 1b551392b71a21f488cc250fecf0f4c9,
+    type: 3}
+  thirdEnvironmentImg: {fileID: 1629129887}
+  thirdEnvironmentTexture: {fileID: 2800000, guid: 1b551392b71a21f488cc250fecf0f4c9,
+    type: 3}
+  fourthEnvironmentImg: {fileID: 1418571788}
+  fourthEnvironmentTexture: {fileID: 2800000, guid: 1b551392b71a21f488cc250fecf0f4c9,
+    type: 3}
 --- !u!4 &2058513036
 Transform:
   m_ObjectHideFlags: 0
