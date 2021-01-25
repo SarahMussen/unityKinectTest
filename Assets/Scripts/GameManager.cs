@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
         updateGUI();
     }
 
+
+    //update score when poop is missed
     public void addMissedPoop()
     {
         missedPoop++;
@@ -41,7 +43,7 @@ public class GameManager : MonoBehaviour
     private void updateGUI()
     {
         catchedPoopText.text = "Score: " + catchedPoop;
-        missedPoopText.text = "Missed: " +missedPoop;
+        missedPoopText.text = "Missed: " + missedPoop;
     }
 
 
