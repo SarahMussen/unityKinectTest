@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     private int catchedPoop = 0;
     private int missedPoop = 0;
+
+    private bool winner = false;
+    private bool gameEnded = false;
 
     [SerializeField]
     private TextMeshProUGUI catchedPoopText;
@@ -73,6 +77,17 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Button popUpButton;
 
+    [SerializeField]
+    private Canvas endingCanvas;
+    [SerializeField]
+    private RawImage endingImg;
+    [SerializeField]
+    private TextMeshProUGUI endingTitle;
+    [SerializeField]
+    private Button endingButton;
+    [SerializeField]
+    private Texture winnerImg;
+
     void Awake()
     {
         if (Instance == null) 
@@ -89,6 +104,11 @@ public class GameManager : MonoBehaviour
         catchedPoop++;
         catchedPoopText.text = "score: " + catchedPoop;
         updateUpgradeGUI();
+
+        if(catchedPoop == 20)
+        {
+            winner = true;
+        }
     }
 
 
@@ -115,14 +135,14 @@ public class GameManager : MonoBehaviour
                 upgradeText.text = "1/4 items gevonden";
                 firstItemImg.texture = firstItemTexture;
 
-                openPopUp(firstItemTexture, "Eerste item unlocked", "Je hebt genoeg mest verzameld om je allereerste item te maken, namelijk een t-shirt!");
+                openPopUp(firstItemTexture, "Je hebt genoeg mest verzameld om je allereerste item te maken, namelijk een t-shirt!");
                 break;
             case 10:
                 upgradeSlider.value = 50;
                 upgradeText.text = "2/4 items gevonden";
                 secondItemImg.texture = secondItemTexture;
 
-                openPopUp(secondItemTexture, "Tweede item unlocked", "Je hebt genoeg mest verzameld om een tweede item te maken, namelijk een cowpot!");
+                openPopUp(secondItemTexture, "Je hebt genoeg mest verzameld om een tweede item te maken, namelijk een cowpot!");
 
                 break;
             case 15:
@@ -130,16 +150,15 @@ public class GameManager : MonoBehaviour
                 upgradeText.text = "3/4 items gevonden";
                 thirdItemImg.texture = thirdItemTexture;
 
-                openPopUp(thirdItemTexture, "Derde item unlocked", "Je hebt genoeg mest verzameld om een derde item te maken, namelijk een merdapot!");
+                openPopUp(thirdItemTexture, "Je hebt genoeg mest verzameld om een derde item te maken, namelijk een merdapot!");
 
                 break;
             case 20:
                 upgradeSlider.value = 100;
                 upgradeText.text = "4/4 items gevonden";
                 fourthItemImg.texture = fourthItemTexture;
-
-                openPopUp(fourthItemTexture, "Vierde item unlocked", "Je hebt genoeg mest verzameld om een tweede item te maken, namelijk wc papier!");
-
+                gameEnded = true;
+                openPopUp(fourthItemTexture, "Je hebt genoeg mest verzameld om een vierde item te maken, namelijk wc papier!");
                 break;
             default:
                 break;
@@ -173,6 +192,7 @@ public class GameManager : MonoBehaviour
                 downgradeSlider.value = 0;
                 downgradeText.text = "0% omgeving";
                 fourthEnvironmentImg.texture = fourthEnvironmentTexture;
+                gameEnded = true;
                 break;
             default:
                 break;
@@ -183,12 +203,10 @@ public class GameManager : MonoBehaviour
     /// A popup is shown with a certain image, title and text. When the popup opens, the game is paused
     /// </summary>
     /// <param name="img">The texture that needs to be shown in the popup</param>
-    /// <param name="title">The title the popup needs to have</param>
     /// <param name="detailText">The explanation of the unlocked item/environmental change</param>
-    private void openPopUp(Texture img, string title, string detailText)
+    private void openPopUp(Texture img, string detailText)
     {
         popUpImg.texture = img;
-        popUpTitle.text = title;
         popUpText.text = detailText;
         popUpCanvas.gameObject.SetActive(true);
 
@@ -203,7 +221,35 @@ public class GameManager : MonoBehaviour
     {
         popUpCanvas.gameObject.SetActive(false);
 
-        Time.timeScale = 1;
+        if (gameEnded)
+        {
+            endGame();
+        } else
+        {
+            Time.timeScale = 1;
+        }
     }
 
+    /// <summary>
+    /// changes the ending popup if the player is the winner, pauses the game en shows the ending popup
+    /// </summary>
+    private void endGame()
+    {
+        if (winner)
+        {
+            endingImg.texture = winnerImg;
+            endingTitle.text = "Je hebt gewonnen";
+        }
+
+        Time.timeScale = 0;
+        endingCanvas.gameObject.SetActive(true);
+    }
+
+    /// <summary>
+    /// restarts the game
+    /// </summary>
+    public void restartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
