@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
     public void addMissedPoop()
     {
         missedPoop++;
-        missedPoopText.text = "score: " + missedPoop;
+        missedPoopText.text = "missed: " + missedPoop;
         updateDowngradeGUI();
     }
 
