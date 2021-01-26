@@ -62,6 +62,17 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Texture fourthEnvironmentTexture;
 
+    [SerializeField]
+    private Canvas popUpCanvas;
+    [SerializeField]
+    private RawImage popUpImg;
+    [SerializeField]
+    private TextMeshProUGUI popUpTitle;
+    [SerializeField]
+    private TextMeshProUGUI popUpText;
+    [SerializeField]
+    private Button popUpButton;
+
     void Awake()
     {
         if (Instance == null) 
@@ -103,21 +114,32 @@ public class GameManager : MonoBehaviour
                 upgradeSlider.value = 25;
                 upgradeText.text = "1/4 items gevonden";
                 firstItemImg.texture = firstItemTexture;
+
+                openPopUp(firstItemTexture, "Eerste item unlocked", "Je hebt genoeg mest verzameld om je allereerste item te maken, namelijk een t-shirt!");
                 break;
             case 10:
                 upgradeSlider.value = 50;
                 upgradeText.text = "2/4 items gevonden";
                 secondItemImg.texture = secondItemTexture;
+
+                openPopUp(secondItemTexture, "Tweede item unlocked", "Je hebt genoeg mest verzameld om een tweede item te maken, namelijk een cowpot!");
+
                 break;
             case 15:
                 upgradeSlider.value = 75;
                 upgradeText.text = "3/4 items gevonden";
                 thirdItemImg.texture = thirdItemTexture;
+
+                openPopUp(thirdItemTexture, "Derde item unlocked", "Je hebt genoeg mest verzameld om een derde item te maken, namelijk een merdapot!");
+
                 break;
             case 20:
                 upgradeSlider.value = 100;
                 upgradeText.text = "4/4 items gevonden";
                 fourthItemImg.texture = fourthItemTexture;
+
+                openPopUp(fourthItemTexture, "Vierde item unlocked", "Je hebt genoeg mest verzameld om een tweede item te maken, namelijk wc papier!");
+
                 break;
             default:
                 break;
@@ -157,7 +179,31 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// A popup is shown with a certain image, title and text. When the popup opens, the game is paused
+    /// </summary>
+    /// <param name="img">The texture that needs to be shown in the popup</param>
+    /// <param name="title">The title the popup needs to have</param>
+    /// <param name="detailText">The explanation of the unlocked item/environmental change</param>
+    private void openPopUp(Texture img, string title, string detailText)
+    {
+        popUpImg.texture = img;
+        popUpTitle.text = title;
+        popUpText.text = detailText;
+        popUpCanvas.gameObject.SetActive(true);
 
+        Time.timeScale = 0;
+    }
 
+    /// <summary>
+    /// close popUp canvas and continues game. 
+    /// has to be publid so the button can access the function
+    /// </summary>
+    public void closePopUp()
+    {
+        popUpCanvas.gameObject.SetActive(false);
+
+        Time.timeScale = 1;
+    }
 
 }

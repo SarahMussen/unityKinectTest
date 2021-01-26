@@ -615,7 +615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nieuw item unlocked!
+  m_text: title
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -684,10 +684,10 @@ MonoBehaviour:
   m_margin: {x: -2.5282593, y: 0, z: 2.034729, w: 0.81474304}
   m_textInfo:
     textComponent: {fileID: 523879647}
-    characterCount: 20
+    characterCount: 5
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -1415,7 +1415,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 899505308}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2058513035}
+        m_MethodName: closePopUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &899505308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2747,8 +2758,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Je hebt genoeg mest verzameld om je allereerste item te maken, namelijk
-    een t-shirt!
+  m_text: Hier komt een teksje.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2817,12 +2827,12 @@ MonoBehaviour:
   m_margin: {x: -53.901886, y: 0, z: -50.864258, w: -51.78116}
   m_textInfo:
     textComponent: {fileID: 1503703190}
-    characterCount: 84
+    characterCount: 21
     spriteCount: 0
-    spaceCount: 13
-    wordCount: 14
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 3
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -3389,7 +3399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1852696731
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3912,6 +3922,11 @@ MonoBehaviour:
   fourthEnvironmentImg: {fileID: 1418571788}
   fourthEnvironmentTexture: {fileID: 2800000, guid: 1b551392b71a21f488cc250fecf0f4c9,
     type: 3}
+  popUpCanvas: {fileID: 1852696734}
+  popUpImg: {fileID: 1213711135}
+  popUpTitle: {fileID: 523879647}
+  popUpText: {fileID: 1503703190}
+  popUpButton: {fileID: 899505307}
 --- !u!4 &2058513036
 Transform:
   m_ObjectHideFlags: 0
