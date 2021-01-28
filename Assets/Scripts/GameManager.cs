@@ -38,22 +38,28 @@ public class GameManager : MonoBehaviour
     private RawImage[] itemIcons;
     [SerializeField]
     private Texture[] itemTextures;
-    [SerializeField]
-    private string[] itemDescriptions;
-    [SerializeField]
-    private Texture[] popupImages;
+
 
     //popup canvas
     [SerializeField]
     private Canvas popUpCanvas;
     [SerializeField]
-    private RawImage popUpImg;
-    [SerializeField]
-    private TextMeshProUGUI popUpTitle;
-    [SerializeField]
-    private TextMeshProUGUI popUpText;
+    private RawImage popUp;
+    /*  [SerializeField]
+        private RawImage popUpImg;
+        [SerializeField]
+        private TextMeshProUGUI popUpTitle;
+        [SerializeField]
+        private TextMeshProUGUI popUpText;*/
     [SerializeField]
     private Button popUpButton;
+
+    /*    [SerializeField]
+    private string[] itemDescriptions;
+    [SerializeField]
+    private Texture[] popupImages;*/
+    [SerializeField]
+    private Texture[] popUps;
 
     //ending canvas
     [SerializeField]
@@ -108,9 +114,10 @@ public class GameManager : MonoBehaviour
     private void openPopUp(int itemToUnlock)
     {
         itemIcons[itemToUnlock-1].texture = itemTextures[itemToUnlock-1];
-        popUpImg.texture = popupImages[itemToUnlock-1];
-        popUpText.text = itemDescriptions[itemToUnlock-1];
+         /*popUpImg.texture = popupImages[itemToUnlock-1];
+         popUpText.text = itemDescriptions[itemToUnlock-1];*/
 
+        popUp.texture = popUps[itemToUnlock - 1];
         popUpCanvas.gameObject.SetActive(true);
 
         Time.timeScale = 0;
@@ -125,6 +132,13 @@ public class GameManager : MonoBehaviour
     private void updateDowngradeGUI()
     {
         downgradeSlider.value = downgradeSlider.value - 25;
+
+        if(downgradeSlider.value == 0)
+        {
+            gameEnded = true;
+            winner = false;
+            endGame();
+        }
 
     }
 
@@ -157,6 +171,7 @@ public class GameManager : MonoBehaviour
 
     public void restartGame()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
