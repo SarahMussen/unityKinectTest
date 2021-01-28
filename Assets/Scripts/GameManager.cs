@@ -113,6 +113,7 @@ public class GameManager : MonoBehaviour
 
     private void openPopUp(int itemToUnlock)
     {
+        upgradeSlider.value++;
         itemIcons[itemToUnlock-1].texture = itemTextures[itemToUnlock-1];
          /*popUpImg.texture = popupImages[itemToUnlock-1];
          popUpText.text = itemDescriptions[itemToUnlock-1];*/
@@ -131,7 +132,7 @@ public class GameManager : MonoBehaviour
 
     private void updateDowngradeGUI()
     {
-        downgradeSlider.value = downgradeSlider.value - 25;
+        downgradeSlider.value = downgradeSlider.value - 1;
 
         if(downgradeSlider.value == 0)
         {
@@ -159,6 +160,7 @@ public class GameManager : MonoBehaviour
 
     private void endGame()
     {
+        popUpCanvas.gameObject.SetActive(false);
         if (winner)
         {
             endingImg.texture = winnerImg;
