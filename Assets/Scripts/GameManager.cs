@@ -73,7 +73,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Texture winnerImg;
 
-
     void Awake()
     {
         if (Instance == null) 
@@ -82,6 +81,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public int getCatchedPoop()
+    {
+        return catchedPoop;
+    }
+
+    public int getMissedPoop()
+    {
+        return missedPoop;
+    }
+
+    /// <summary>
+    /// increases the catchedPoop score with 1
+    /// calls the updateScoreGUI function
+    /// if the catchedPoop score equals 5, it increases the itemsUnlocked value en calls the openPopUp function
+    /// </summary>
     public void addCathedPoop()
     {
         catchedPoop++;
