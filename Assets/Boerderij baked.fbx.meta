@@ -1,0 +1,305 @@
+fileFormatVersion: 2
+guid: 0b17425a920415944ae5b44400e8851e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: appelboom
+    100002: appelboom_1
+    100004: appelboom_1_2
+    100006: appelboom_2
+    100008: bloem_paars
+    100010: bloem_paars_1
+    100012: bloem_paars_1_2
+    100014: bloem_paars_2
+    100016: bloem_rood
+    100018: bloem_rood_1
+    100020: bloem_rood_1_2
+    100022: bloem_rood_2
+    100024: bloem_roos
+    100026: bloem_roos_1
+    100028: bloem_roos_1_2
+    100030: bloem_roos_2
+    100032: bloempot
+    100034: bloempot_2
+    100036: //RootNode
+    100038: bollenboom
+    100040: bollenboom_1
+    100042: bollenboom_1_2
+    100044: bollenboom_2
+    100046: camera_boer
+    100048: camera_boer_2
+    100050: camera_koe
+    100052: camera_koe_2
+    100054: CINEMA_4D_Editor
+    100056: dennenboom
+    100058: dennenboom_1
+    100060: dennenboom_1_2
+    100062: dennenboom_2
+    100064: gras_en_rivier
+    100066: gras_en_rivier_2
+    100068: hekjes_display_boer
+    100070: hekjes_display_boer_2
+    100072: hekjes_display_koe
+    100074: hekjes_display_koe_2
+    100076: lucht_boer
+    100078: lucht_boer_2
+    100080: lucht_koe
+    100082: lucht_koe_2
+    100084: stro_view_boer
+    100086: stro_view_boer_2
+    100088: stro_view_koe
+    100090: stro_view_koe_2
+    100092: stront_in_gras
+    100094: stront_in_gras_2
+    100096: toilet
+    100098: toilet_2
+    100100: toilet_papier
+    100102: toilet_papier_2
+    100104: zonnenbloemen_display_boer
+    100106: zonnenbloemen_display_boer_2
+    100108: zonnenbloemen_display_koe
+    100110: zonnenbloemen_display_koe_2
+    400000: appelboom
+    400002: appelboom_1
+    400004: appelboom_1_2
+    400006: appelboom_2
+    400008: bloem_paars
+    400010: bloem_paars_1
+    400012: bloem_paars_1_2
+    400014: bloem_paars_2
+    400016: bloem_rood
+    400018: bloem_rood_1
+    400020: bloem_rood_1_2
+    400022: bloem_rood_2
+    400024: bloem_roos
+    400026: bloem_roos_1
+    400028: bloem_roos_1_2
+    400030: bloem_roos_2
+    400032: bloempot
+    400034: bloempot_2
+    400036: //RootNode
+    400038: bollenboom
+    400040: bollenboom_1
+    400042: bollenboom_1_2
+    400044: bollenboom_2
+    400046: camera_boer
+    400048: camera_boer_2
+    400050: camera_koe
+    400052: camera_koe_2
+    400054: CINEMA_4D_Editor
+    400056: dennenboom
+    400058: dennenboom_1
+    400060: dennenboom_1_2
+    400062: dennenboom_2
+    400064: gras_en_rivier
+    400066: gras_en_rivier_2
+    400068: hekjes_display_boer
+    400070: hekjes_display_boer_2
+    400072: hekjes_display_koe
+    400074: hekjes_display_koe_2
+    400076: lucht_boer
+    400078: lucht_boer_2
+    400080: lucht_koe
+    400082: lucht_koe_2
+    400084: stro_view_boer
+    400086: stro_view_boer_2
+    400088: stro_view_koe
+    400090: stro_view_koe_2
+    400092: stront_in_gras
+    400094: stront_in_gras_2
+    400096: toilet
+    400098: toilet_2
+    400100: toilet_papier
+    400102: toilet_papier_2
+    400104: zonnenbloemen_display_boer
+    400106: zonnenbloemen_display_boer_2
+    400108: zonnenbloemen_display_koe
+    400110: zonnenbloemen_display_koe_2
+    2000000: camera_boer_2
+    2000002: camera_koe_2
+    2000004: CINEMA_4D_Editor
+    2100000: 1. stront
+    2100002: toilet
+    2100004: toilet-papier_middenste
+    2100006: toilet-papier
+    2100008: bloempot aarde
+    2100010: 1. bloem midden
+    2100012: 1. bloem steel
+    2100014: bloempot pot
+    2100016: 1. bomen
+    2100018: 1. boomstam
+    2100020: 1. appels
+    2100022: stro
+    2100024: 1. bloem roos
+    2100026: 1. bloem paars
+    2100028: 1. bloem rood
+    2100030: 1. zonnenbloem blad
+    2100032: 1. zonnenbloem midden
+    2100034: No Name
+    2100036: hek hechting
+    2100038: hek hout
+    2100040: 1. lucht
+    2100042: stenen
+    2100044: 1. gras
+    2100046: 1. water
+    2300000: appelboom_1_2
+    2300002: appelboom_2
+    2300004: bloem_paars_1_2
+    2300006: bloem_paars_2
+    2300008: bloem_rood_1_2
+    2300010: bloem_rood_2
+    2300012: bloem_roos_1_2
+    2300014: bloem_roos_2
+    2300016: bloempot_2
+    2300018: bollenboom_1_2
+    2300020: bollenboom_2
+    2300022: dennenboom_1_2
+    2300024: dennenboom_2
+    2300026: gras_en_rivier_2
+    2300028: hekjes_display_boer_2
+    2300030: hekjes_display_koe_2
+    2300032: lucht_boer_2
+    2300034: lucht_koe_2
+    2300036: stro_view_boer_2
+    2300038: stro_view_koe_2
+    2300040: stront_in_gras_2
+    2300042: toilet_2
+    2300044: toilet_papier_2
+    2300046: zonnenbloemen_display_boer_2
+    2300048: zonnenbloemen_display_koe_2
+    3300000: appelboom_1_2
+    3300002: appelboom_2
+    3300004: bloem_paars_1_2
+    3300006: bloem_paars_2
+    3300008: bloem_rood_1_2
+    3300010: bloem_rood_2
+    3300012: bloem_roos_1_2
+    3300014: bloem_roos_2
+    3300016: bloempot_2
+    3300018: bollenboom_1_2
+    3300020: bollenboom_2
+    3300022: dennenboom_1_2
+    3300024: dennenboom_2
+    3300026: gras_en_rivier_2
+    3300028: hekjes_display_boer_2
+    3300030: hekjes_display_koe_2
+    3300032: lucht_boer_2
+    3300034: lucht_koe_2
+    3300036: stro_view_boer_2
+    3300038: stro_view_koe_2
+    3300040: stront_in_gras_2
+    3300042: toilet_2
+    3300044: toilet_papier_2
+    3300046: zonnenbloemen_display_boer_2
+    3300048: zonnenbloemen_display_koe_2
+    4300000: toilet_2
+    4300002: toilet_papier_2
+    4300004: bloempot_2
+    4300006: bollenboom_2
+    4300008: appelboom_2
+    4300010: appelboom_1_2
+    4300012: dennenboom_1_2
+    4300014: bollenboom_1_2
+    4300016: dennenboom_2
+    4300018: stro_view_boer_2
+    4300020: stro_view_koe_2
+    4300022: bloem_roos_1_2
+    4300024: bloem_paars_2
+    4300026: bloem_rood_1_2
+    4300028: bloem_paars_1_2
+    4300030: bloem_rood_2
+    4300032: bloem_roos_2
+    4300034: stront_in_gras_2
+    4300036: zonnenbloemen_display_koe_2
+    4300038: zonnenbloemen_display_boer_2
+    4300040: hekjes_display_koe_2
+    4300042: hekjes_display_boer_2
+    4300044: lucht_koe_2
+    4300046: lucht_boer_2
+    4300048: gras_en_rivier_2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
