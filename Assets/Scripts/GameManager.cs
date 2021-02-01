@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Texture winnerImg;
 
-
+    //unlocked items
     [SerializeField]
     private GameObject farmerBody;
     [SerializeField]
@@ -72,6 +72,14 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Material blue;
 
+    [SerializeField]
+    private GameObject toilet;
+    [SerializeField]
+    private GameObject toiletPaper;
+    [SerializeField]
+    private GameObject cowPot;
+
+    //renderers
     private Renderer rendBody;
     private Renderer rendLegLeft;
     private Renderer rendLegRight;
@@ -164,8 +172,19 @@ public class GameManager : MonoBehaviour
             rendLegRight.materials = matsLegRight;
         }
 
+        if(itemToUnlock == 2)
+        {
+            toilet.SetActive(true);
+        }
+
+        if (itemToUnlock == 3)
+        {
+            toiletPaper.SetActive(true);
+        }
+
         if (itemToUnlock == 4)
         {
+            cowPot.SetActive(true);
             gameEnded = true;
             winner = true;
         }

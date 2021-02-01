@@ -1,0 +1,230 @@
+fileFormatVersion: 2
+guid: deff301229add4243b28edb942427530
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: appelboom
+    100002: appelboom_2
+    100004: bloem_paars
+    100006: bloem_paars_2
+    100008: bloem_rood
+    100010: bloem_rood_2
+    100012: bloem_roos
+    100014: bloem_roos_2
+    100016: bloempot
+    100018: //RootNode
+    100020: bollenboom
+    100022: bollenboom_2
+    100024: dennenboom
+    100026: dennenboom_2
+    100028: gras_en_rivier
+    100030: hekjes_display_boer
+    100032: hekjes_display_koe
+    100034: stro_view_boer
+    100036: stro_view_koe
+    100038: stront_in_gras
+    100040: toilet
+    100042: toilet_papier
+    100044: zonnenbloemen_diplay_koe
+    100046: zonnenbloemen_display_boer
+    400000: appelboom
+    400002: appelboom_2
+    400004: bloem_paars
+    400006: bloem_paars_2
+    400008: bloem_rood
+    400010: bloem_rood_2
+    400012: bloem_roos
+    400014: bloem_roos_2
+    400016: bloempot
+    400018: //RootNode
+    400020: bollenboom
+    400022: bollenboom_2
+    400024: dennenboom
+    400026: dennenboom_2
+    400028: gras_en_rivier
+    400030: hekjes_display_boer
+    400032: hekjes_display_koe
+    400034: stro_view_boer
+    400036: stro_view_koe
+    400038: stront_in_gras
+    400040: toilet
+    400042: toilet_papier
+    400044: zonnenbloemen_diplay_koe
+    400046: zonnenbloemen_display_boer
+    2100000: 1. stront
+    2100002: toilet
+    2100004: toilet-papier_middenste
+    2100006: toilet-papier
+    2100008: bloempot aarde
+    2100010: 1. bloem midden
+    2100012: 1. bloem steel
+    2100014: bloempot pot
+    2100016: 1. bomen
+    2100018: 1. boomstam
+    2100020: 1. appels
+    2100022: stro
+    2100024: 1. bloem roos
+    2100026: 1. bloem paars
+    2100028: 1. bloem rood
+    2100030: 1. zonnenbloem blad
+    2100032: 1. zonnenbloem midden
+    2100034: stenen
+    2100036: 1. gras
+    2100038: 1. water
+    2100040: hek hechting
+    2100042: hek hout
+    2300000: appelboom
+    2300002: appelboom_2
+    2300004: bloem_paars
+    2300006: bloem_paars_2
+    2300008: bloem_rood
+    2300010: bloem_rood_2
+    2300012: bloem_roos
+    2300014: bloem_roos_2
+    2300016: bloempot
+    2300018: bollenboom
+    2300020: bollenboom_2
+    2300022: dennenboom
+    2300024: dennenboom_2
+    2300026: gras_en_rivier
+    2300028: hekjes_display_boer
+    2300030: hekjes_display_koe
+    2300032: stro_view_boer
+    2300034: stro_view_koe
+    2300036: stront_in_gras
+    2300038: toilet
+    2300040: toilet_papier
+    2300042: zonnenbloemen_diplay_koe
+    2300044: zonnenbloemen_display_boer
+    3300000: appelboom
+    3300002: appelboom_2
+    3300004: bloem_paars
+    3300006: bloem_paars_2
+    3300008: bloem_rood
+    3300010: bloem_rood_2
+    3300012: bloem_roos
+    3300014: bloem_roos_2
+    3300016: bloempot
+    3300018: bollenboom
+    3300020: bollenboom_2
+    3300022: dennenboom
+    3300024: dennenboom_2
+    3300026: gras_en_rivier
+    3300028: hekjes_display_boer
+    3300030: hekjes_display_koe
+    3300032: stro_view_boer
+    3300034: stro_view_koe
+    3300036: stront_in_gras
+    3300038: toilet
+    3300040: toilet_papier
+    3300042: zonnenbloemen_diplay_koe
+    3300044: zonnenbloemen_display_boer
+    4300000: toilet
+    4300002: toilet_papier
+    4300004: bloempot
+    4300006: bollenboom
+    4300008: appelboom
+    4300010: appelboom_2
+    4300012: dennenboom
+    4300014: bollenboom_2
+    4300016: dennenboom_2
+    4300018: stro_view_boer
+    4300020: stro_view_koe
+    4300022: bloem_roos
+    4300024: bloem_paars
+    4300026: bloem_rood
+    4300028: bloem_paars_2
+    4300030: bloem_rood_2
+    4300032: bloem_roos_2
+    4300034: stront_in_gras
+    4300036: zonnenbloemen_diplay_koe
+    4300038: zonnenbloemen_display_boer
+    4300040: gras_en_rivier
+    4300042: hekjes_display_koe
+    4300044: hekjes_display_boer
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
