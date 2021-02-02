@@ -8882,8 +8882,10 @@ MonoBehaviour:
   flowerPurpleLeafBad: {fileID: 2100000, guid: f629200e9993001479e9948282025d9c, type: 2}
   plane: {fileID: 531273637}
   grassBad: {fileID: 2100000, guid: 3d29910e67d957d42a6aba81965e14e5, type: 2}
-  airFarmer: {fileID: 0}
-  airCow: {fileID: 0}
+  waterBad: {fileID: 2100000, guid: 894df8b1848a4e74991cb26f11bcff71, type: 2}
+  airFarmer: {fileID: 371532949}
+  airCow: {fileID: 235088830}
+  badAir: {fileID: 21300000, guid: a0c413893fb7e8c4e8238e834dd1f101, type: 3}
 --- !u!4 &2058513036
 Transform:
   m_ObjectHideFlags: 0

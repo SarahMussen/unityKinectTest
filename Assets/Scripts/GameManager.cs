@@ -134,6 +134,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject airCow;
 
+    [SerializeField]
+    private Sprite badAir;
+
     //renderers
     private Renderer rendBody;
     private Renderer rendLegLeft;
@@ -154,8 +157,8 @@ public class GameManager : MonoBehaviour
     private Renderer rendPinkFlower6;
 
     private Renderer rendPlane;
-/*    private Renderer rendAirFarmer;
-    private Renderer rendAirCow;*/
+    private SpriteRenderer rendAirFarmer;
+    private SpriteRenderer rendAirCow;
 
     void Awake()
     {
@@ -187,8 +190,8 @@ public class GameManager : MonoBehaviour
 
         rendPlane = plane.GetComponent<Renderer>();
 
-/*        rendAirFarmer = airFarmer.GetComponent<Renderer>();
-        rendAirCow = rendAirCow.GetComponent<Renderer>();*/
+        rendAirFarmer = airFarmer.GetComponent<SpriteRenderer>();
+        rendAirCow = airCow.GetComponent<SpriteRenderer>();
     }
 
     public int getCatchedPoop()
@@ -309,6 +312,7 @@ public class GameManager : MonoBehaviour
 
                 var matsPlane = rendPlane.materials;
                 matsPlane[1] = grassBad;
+                matsPlane[2] = grassBad;
                 rendPlane.materials = matsPlane;
                 break;
 
@@ -337,6 +341,9 @@ public class GameManager : MonoBehaviour
                 matsPlane = rendPlane.materials;
                 matsPlane[3] = waterBad;
                 rendPlane.materials = matsPlane;
+
+                rendAirCow.sprite = badAir;
+                rendAirFarmer.sprite = badAir;
 
                 break;
             default:
