@@ -8,9 +8,9 @@ public class MoveInRandomDirection : MonoBehaviour
     public float speed = 1.0f;
 
 
-    private float targetRangeX = 12.0f; //6.0
+    private float targetRangeX = 6.0f; //6.0
     private float targetRangeMinY = 3.0f;
-    private float targetRangeMaxY = 14.0f;//8
+    private float targetRangeMaxY = 8.0f;//8
     private float targetPosZ = -4.0f;
 
     private Vector3 targetPosition;

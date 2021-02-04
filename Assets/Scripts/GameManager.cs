@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     private int itemsUnlocked = 0;
 
-
+    private bool isScaling = false;
     //TEST 
     [SerializeField]
     private TextMeshProUGUI missedPoopText;
@@ -194,16 +195,6 @@ public class GameManager : MonoBehaviour
         rendAirCow = airCow.GetComponent<SpriteRenderer>();
     }
 
-    public int getCatchedPoop()
-    {
-        return catchedPoop;
-    }
-
-    public int getMissedPoop()
-    {
-        return missedPoop;
-    }
-
     public void addCathedPoop()
     {
         catchedPoop++;
@@ -231,18 +222,26 @@ public class GameManager : MonoBehaviour
     private void updateScoreGUI()
     {
         upgradeText.text = catchedPoop + "/5";
+        upgradeSlider.DOValue(upgradeSlider.value + 1, 1f).Play();
     }
 
     private void openPopUp(int itemToUnlock)
     {
-        upgradeSlider.value++;
-        itemIcons[itemToUnlock-1].texture = itemTextures[itemToUnlock-1];
 
+        //show item on coin
+        itemIcons[itemToUnlock-1].texture = itemTextures[itemToUnlock-1];
+        
+        //show item on popup
         popUp.texture = popUps[itemToUnlock - 1];
+
+        //open popup
         popUpCanvas.gameObject.SetActive(true);
 
-        Time.timeScale = 0;
+        TryScaleUpCanvas();
 
+        //pause game
+
+        //show unlock item in world
         if (itemToUnlock == 1)
         {
 
@@ -259,7 +258,7 @@ public class GameManager : MonoBehaviour
             rendLegRight.materials = matsLegRight;
         }
 
-        if(itemToUnlock == 2)
+        if (itemToUnlock == 2)
         {
             toilet.SetActive(true);
         }
@@ -268,7 +267,6 @@ public class GameManager : MonoBehaviour
         {
             toiletPaper.SetActive(true);
         }
-
         if (itemToUnlock == 4)
         {
             cowPot.SetActive(true);
@@ -277,9 +275,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void TryScaleUpCanvas()
+    {
+        if (isScaling) { return; }
+        StartCoroutine(ScaleUpPopUp());
+    }
+
+    IEnumerator ScaleUpPopUp()
+    {
+        isScaling = true;
+        var tweener = popUp.transform.DOScale(new Vector3(1, 1, 1), .4f);
+
+        while(tweener.IsActive()) { yield return null; }
+        isScaling = false;
+        Time.timeScale = 0;
+        
+    }
+
     private void updateDowngradeGUI()
     {
-        downgradeSlider.value = downgradeSlider.value - 1;
+
+        downgradeSlider.DOValue(downgradeSlider.value - 1, 1f).Play();
 
         switch (downgradeSlider.value)
         {
@@ -346,15 +362,15 @@ public class GameManager : MonoBehaviour
                 rendAirFarmer.sprite = badAir;
 
                 break;
+
+            case 0:
+                gameEnded = true;
+                winner = false;
+                endGame();
+
+                break;
             default:
                 break;
-        }
-
-        if(downgradeSlider.value == 0)
-        {
-            gameEnded = true;
-            winner = false;
-            endGame();
         }
 
     }
@@ -369,9 +385,28 @@ public class GameManager : MonoBehaviour
         else
         {
             catchedPoop = 0;
-            popUpCanvas.gameObject.SetActive(false);
-            Time.timeScale = 1;
+            TryScaleDownCanvas();
+ 
         }
+    }
+
+    private void TryScaleDownCanvas()
+    {
+        if (isScaling) { return; }
+        StartCoroutine(ScaleDownPopUp());
+    }
+
+    IEnumerator ScaleDownPopUp()
+    {
+        Time.timeScale = 1;
+        isScaling = true;
+        var tweener = popUp.transform.DOScale(new Vector3(0, 0, 1), .4f);
+        Debug.Log("scaling");
+        while (tweener.IsActive()) { yield return null; }
+        Debug.Log("finished scaling");
+        isScaling = false;
+        popUpCanvas.gameObject.SetActive(false);
+        
     }
 
     private void endGame()
