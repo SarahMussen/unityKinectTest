@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Slider downgradeSlider;
 
+    [SerializeField]
+    private Image missedBorder;
+
     //upgrade canvas
     [SerializeField]
     private Slider upgradeSlider;
@@ -212,6 +215,9 @@ public class GameManager : MonoBehaviour
     {
         missedPoop++;
         missedPoopText.text = "missed: " + missedPoop;  //TEST
+
+        missedBorder.DOFade(3f, .6f);
+        missedBorder.DOFade(0f, .6f);
 
         if(missedPoop%5 == 0)
         {
