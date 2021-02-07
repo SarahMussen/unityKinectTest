@@ -25,6 +25,20 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI missedPoopText;
 
+    bool cow = true;
+
+    //intro canvas
+    [SerializeField]
+    private Canvas cowIntroCanvas;
+    [SerializeField]
+    private Canvas farmerIntroCanvas;
+
+    //UI canvas
+    [SerializeField]
+    private Canvas cowCanvas;
+    [SerializeField]
+    private Canvas farmerCanvas;
+
     //downgrade canvas
     [SerializeField]
     private Slider downgradeSlider;
@@ -42,7 +56,6 @@ public class GameManager : MonoBehaviour
     private RawImage[] itemIcons;
     [SerializeField]
     private Texture[] itemTextures;
-
 
     //popup canvas
     [SerializeField]
@@ -65,6 +78,11 @@ public class GameManager : MonoBehaviour
     private Button endingButton;
     [SerializeField]
     private Texture winnerImg;
+
+    //early quit canvas
+    [SerializeField]
+    private Canvas quitCanvas;
+
 
     //unlocked items
     [SerializeField]
@@ -174,6 +192,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+
+        //get render components
         rendBody = farmerBody.GetComponent<Renderer>();
         rendLegLeft = farmerLegLeft.GetComponent<Renderer>();
         rendLegRight = farmerLegRight.GetComponent<Renderer>();
@@ -196,6 +216,18 @@ public class GameManager : MonoBehaviour
 
         rendAirFarmer = airFarmer.GetComponent<SpriteRenderer>();
         rendAirCow = airCow.GetComponent<SpriteRenderer>();
+
+        //don't start the game yet
+        Time.timeScale = 0;
+
+        //set intro canvas
+        if (cow)
+        {
+            cowIntroCanvas.gameObject.SetActive(true);
+        } else
+        {
+            farmerIntroCanvas.gameObject.SetActive(true);
+        }
     }
 
     public void addCathedPoop()
@@ -233,19 +265,17 @@ public class GameManager : MonoBehaviour
 
     private void openPopUp(int itemToUnlock)
     {
-
         //show item on coin
         itemIcons[itemToUnlock-1].texture = itemTextures[itemToUnlock-1];
         
         //show item on popup
         popUp.texture = popUps[itemToUnlock - 1];
 
-        //open popup
+        //set popup active
         popUpCanvas.gameObject.SetActive(true);
 
+        //open popup with scale effect
         TryScaleUpCanvas();
-
-        //pause game
 
         //show unlock item in world
         if (itemToUnlock == 1)
@@ -273,6 +303,7 @@ public class GameManager : MonoBehaviour
         {
             toiletPaper.SetActive(true);
         }
+
         if (itemToUnlock == 4)
         {
             cowPot.SetActive(true);
@@ -300,7 +331,6 @@ public class GameManager : MonoBehaviour
 
     private void updateDowngradeGUI()
     {
-
         downgradeSlider.DOValue(downgradeSlider.value - 1, 1f).Play();
 
         switch (downgradeSlider.value)
@@ -383,7 +413,6 @@ public class GameManager : MonoBehaviour
 
     public void closePopUp()
     {
-
         if (gameEnded)
         {
             endGame();
@@ -392,7 +421,6 @@ public class GameManager : MonoBehaviour
         {
             catchedPoop = 0;
             TryScaleDownCanvas();
- 
         }
     }
 
@@ -415,6 +443,25 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void startGame()
+    {
+        //close canvas
+        cowIntroCanvas.gameObject.SetActive(false);
+        farmerIntroCanvas.gameObject.SetActive(false);
+
+        //start game
+        Time.timeScale = 1;
+
+        if (cow)
+        {
+            cowCanvas.gameObject.SetActive(true);
+        } else
+        {
+            farmerCanvas.gameObject.SetActive(true);
+        }
+    }
+
+    //TODO: code moet herschreven worden voor koe en boer
     private void endGame()
     {
         popUpCanvas.gameObject.SetActive(false);
@@ -432,5 +479,18 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+
+    public void openQuitCanvas()
+    {
+        quitCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void cancelQuit()
+    {
+        quitCanvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }

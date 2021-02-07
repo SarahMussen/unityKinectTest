@@ -277,7 +277,7 @@ RectTransform:
   - {fileID: 1995353930}
   - {fileID: 2071145302}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -445,7 +445,7 @@ RectTransform:
   - {fileID: 897873241}
   - {fileID: 1793748978}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2767,7 +2767,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1483939996}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -3654,7 +3654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15.493011}
+  m_AnchoredPosition: {x: 0, y: -15.493042}
   m_SizeDelta: {x: 1220, y: -191.2432}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &719146663
@@ -4722,7 +4722,7 @@ RectTransform:
   - {fileID: 445752154}
   - {fileID: 125683428}
   m_Father: {fileID: 1483939996}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -5999,7 +5999,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1079272917}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2058513035}
+        m_MethodName: restartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1079272917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7008,7 +7019,7 @@ GameObject:
   - component: {fileID: 1328192316}
   - component: {fileID: 1328192315}
   m_Layer: 5
-  m_Name: StopButton
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7072,7 +7083,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1328192316}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2058513035}
+        m_MethodName: openQuitCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1328192316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7812,7 +7834,7 @@ RectTransform:
   - {fileID: 139994386}
   - {fileID: 1564492999}
   m_Father: {fileID: 1483939996}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -8376,11 +8398,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1689695001}
   - {fileID: 540365387}
   - {fileID: 842398989}
   - {fileID: 1400296173}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8544,7 +8567,7 @@ GameObject:
   - component: {fileID: 1512399653}
   - component: {fileID: 1512399652}
   m_Layer: 5
-  m_Name: close_button
+  m_Name: cancel_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8608,7 +8631,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1512399653}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2058513035}
+        m_MethodName: cancelQuit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1512399653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8722,12 +8756,12 @@ GameObject:
   - component: {fileID: 1536824920}
   - component: {fileID: 1536824919}
   m_Layer: 5
-  m_Name: CloseCanvas
+  m_Name: QuitCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1536824919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8802,7 +8836,7 @@ RectTransform:
   - {fileID: 1559413335}
   - {fileID: 1199518207}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9355,7 +9389,7 @@ RectTransform:
   - {fileID: 2132467759}
   - {fileID: 588763827}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9565,8 +9599,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1189051971}
-  m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_Father: {fileID: 1483939996}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9971,7 +10005,7 @@ RectTransform:
   - {fileID: 280581450}
   - {fileID: 969292363}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10487,7 +10521,7 @@ RectTransform:
   - {fileID: 1255484098}
   - {fileID: 1472490923}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10971,7 +11005,7 @@ RectTransform:
   - {fileID: 719146662}
   - {fileID: 2071540888}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12112,6 +12146,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missedPoopText: {fileID: 540365388}
+  cowIntroCanvas: {fileID: 1969804495}
+  farmerIntroCanvas: {fileID: 24759240}
+  cowCanvas: {fileID: 96076070}
+  farmerCanvas: {fileID: 1483939995}
   downgradeSlider: {fileID: 1564493000}
   missedBorder: {fileID: 1189051972}
   upgradeSlider: {fileID: 445752155}
@@ -12139,6 +12177,7 @@ MonoBehaviour:
   endingTitle: {fileID: 743084060}
   endingButton: {fileID: 899505307}
   winnerImg: {fileID: 2800000, guid: 165342aa4718f614f82563ad1e785851, type: 3}
+  quitCanvas: {fileID: 1536824921}
   farmerBody: {fileID: 137347883}
   farmerLegLeft: {fileID: 1569794154}
   farmerLegRight: {fileID: 1239076799}
@@ -12338,7 +12377,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2071540890}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2058513035}
+        m_MethodName: startGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2071540890
 MonoBehaviour:
   m_ObjectHideFlags: 0
